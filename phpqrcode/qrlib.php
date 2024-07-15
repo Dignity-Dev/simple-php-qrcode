@@ -1,20 +1,11 @@
 <?php
-
 /*
  * PHP QR Code encoder
  *
- * This file contains MERGED version of PHP QR Code library.
- * It was auto-generated from full version for your convenience.
+ * Root library file, prepares environment and includes dependencies
  *
- * This merged version was configured to not require any external files,
- * with disabled cache, error logging and weaker but faster mask matching.
- * If you need tune it up please use non-merged version.
- *
- * For full version, documentation, examples of use please visit:
- *
- *    http://phpqrcode.sourceforge.net/
- *    https://sourceforge.net/projects/phpqrcode/
- *    https://github.com/t0k4rt/phpqrcode
+ * Based on libqrencode C library distributed under LGPL 2.1
+ * Copyright (C) 2006, 2007, 2008, 2009 Kentaro Fukuchi <fukuchi@megaui.net>
  *
  * PHP QR Code is distributed under LGPL 3
  * Copyright (C) 2010 Dominik Dzienia <deltalab at poczta dot fm>
@@ -33,5 +24,20 @@
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  */
- 
- 
+	
+	$QR_BASEDIR = dirname(__FILE__).DIRECTORY_SEPARATOR;
+	
+	// Required libs
+	
+	include $QR_BASEDIR."qrconst.php";
+	include $QR_BASEDIR."qrconfig.php";
+	include $QR_BASEDIR."qrtools.php";
+	include $QR_BASEDIR."qrspec.php";
+	include $QR_BASEDIR."qrimage.php";
+	include $QR_BASEDIR."qrinput.php";
+	include $QR_BASEDIR."qrbitstream.php";
+	include $QR_BASEDIR."qrsplit.php";
+	include $QR_BASEDIR."qrrscode.php";
+	include $QR_BASEDIR."qrmask.php";
+	include $QR_BASEDIR."qrencode.php";
+
